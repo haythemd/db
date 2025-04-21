@@ -14,12 +14,16 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-
+      debugShowMaterialGrid: false,
       initialRoute: "/home",
-
+      theme:ThemeData( primarySwatch: Colors.grey, inputDecorationTheme: const InputDecorationTheme(
+        border: OutlineInputBorder(),
+        filled: true,
+        fillColor: Color(0xFFE3E3E3),
+      ),),
       routes: {
-        "/home": (BuildContext context)=> Homepage()
 
+        "/home": (BuildContext context)=> const Homepage()
 
       },
     );
